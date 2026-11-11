@@ -25,13 +25,17 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Аккорд</a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Меню</button>
+      <nav id="main-nav" class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link" href="index.html">
@@ -59,7 +63,7 @@
 
           <li class="site-nav__item">
             <a
-              class="site-nav__link site-nav__link--active"
+              class="site-nav__link site-nav__link--active" aria-current="page"
               href="contacts.html"
             >
               Контакты
@@ -76,7 +80,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- Breadcrumbs — это навигационная цепочка, показывающая путь пользователя внутри сайта: Главная / Контакты -->
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">
@@ -148,6 +152,17 @@
         Записаться на занятие
       </a>
     </aside>
+  <section class="order-section" aria-labelledby="feedback-title">
+      <h2 id="feedback-title">Задать вопрос</h2>
+      <form class="order-form order-form--page" id="feedback-form">
+        <p class="form-note">* — обязательные поля. Учебная форма, данные не отправляются.</p>
+        <div class="order-form__field"><label class="order-form__label" for="feedback-name">Имя *</label><input class="order-form__input" id="feedback-name" name="name" autocomplete="name" minlength="2" required></div>
+        <div class="order-form__field"><label class="order-form__label" for="feedback-email">E-mail *</label><input class="order-form__input" id="feedback-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="order-form__field order-form__field--wide"><label class="order-form__label" for="feedback-message">Ваш вопрос *</label><textarea class="order-form__textarea" id="feedback-message" name="message" rows="4" minlength="5" required></textarea></div>
+        <div class="order-form__actions"><button class="button button--primary" type="submit">Отправить вопрос</button></div>
+      </form>
+      <p class="success-message" id="feedback-success" role="status" tabindex="-1" hidden>Демонстрация: вопрос заполнен корректно. Данные никуда не отправлены.</p>
+    </section>
   </main>
 
   <footer class="site-footer">

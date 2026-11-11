@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Музыкальная школа Аккорд">
   <meta property="og:description" content="Занятия вокалом, гитарой и фортепиано для детей и взрослых.">
-  <meta property="og:image" content="https://zakhar-buldin.github.io/kr1-html-css-shop/images/guitar.jpg">
+  <meta property="og:image" content="https://zakhar-buldin.github.io/kr3-responsive-shop/images/guitar.jpg">
 
   <title>Музыкальная школа Аккорд</title>
 
@@ -22,6 +22,7 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
   <!-- Подключение JavaScript-файла -->
   <!-- defer позволяет не блокировать разбор HTML и гарантирует выполнение скрипта после построения документа-->
@@ -29,15 +30,17 @@
   
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Аккорд</a>
 
       <!-- Блок навигации, в котором находятся основные ссылки по сайту или странице -->
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Меню</button>
+      <nav id="main-nav" class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="index.html">
+            <a class="site-nav__link site-nav__link--active" aria-current="page" href="index.html">
               Главная
             </a>
           </li>
@@ -76,8 +79,9 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="hero">
+      <div class="hero__content">
       <h1>Музыкальная школа «Аккорд»</h1>
 
       <p>
@@ -89,7 +93,11 @@
       <a class="button button--primary" href="#popular">
         Выбрать направление
       </a>
-    </section>
+    </div>
+<picture>
+  <source type="image/webp" srcset="images/guitar-360.webp 360w, images/guitar-720.webp 720w" sizes="(min-width: 900px) 400px, 85vw">
+  <img class="hero__image" src="images/guitar.jpg" alt="Гитара — одно из направлений школы" width="735" height="939" fetchpriority="high" decoding="async">
+</picture></section>
 
     <section class="section" id="advantages">
       <h2>Почему выбирают нашу школу</h2>
@@ -106,7 +114,11 @@
       <h2>Популярные направления</h2>
 
       <div class="products-grid">
-        <article class="product-card product-card--featured">
+        <article class="product-card product-card--featured" data-category="instruments" data-price="1500">
+<picture>
+  <source type="image/webp" srcset="images/guitar-360.webp 360w, images/guitar-720.webp 720w" sizes="(min-width: 1100px) 250px, (min-width: 640px) 40vw, 85vw">
+  <img class="product-card__image" src="images/guitar.jpg" alt="Гитара" width="735" height="939" loading="lazy" decoding="async">
+</picture>
           <h3 class="product-card__title">Гитара</h3>
 
           <p class="product-card__description">
@@ -126,7 +138,11 @@
           </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="instruments" data-price="1700">
+<picture>
+  <source type="image/webp" srcset="images/piano-360.webp 360w, images/piano-720.webp 720w" sizes="(min-width: 1100px) 250px, (min-width: 640px) 40vw, 85vw">
+  <img class="product-card__image" src="images/piano.jpg" alt="Фортепиано" width="736" height="981" loading="lazy" decoding="async">
+</picture>
           <h3 class="product-card__title">Фортепиано</h3>
 
           <p class="product-card__description">
@@ -146,7 +162,11 @@
           </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="vocal" data-price="1600">
+<picture>
+  <source type="image/webp" srcset="images/vocal-360.webp 360w, images/vocal-720.webp 720w" sizes="(min-width: 1100px) 250px, (min-width: 640px) 40vw, 85vw">
+  <img class="product-card__image" src="images/vocal.jpg" alt="Вокал" width="1018" height="1018" loading="lazy" decoding="async">
+</picture>
           <h3 class="product-card__title">Вокал</h3>
 
           <p class="product-card__description">
@@ -195,16 +215,18 @@
     id="order-dialog"
     aria-labelledby="order-dialog-title"
   >
+    <button class="dialog-close" type="button" aria-label="Закрыть окно записи">×</button>
     <h2 class="order-dialog__title" id="order-dialog-title">
       Запись на пробное занятие
     </h2>
-    
+    <p id="selected-course-text"></p>
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <p class="form-note">* — обязательные поля. Учебная форма, данные не отправляются.</p>
       <input id="selected-product" name="selected-product" type="hidden">
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-name">
-          Имя
+          Имя *
         </label>
 
         <input
@@ -221,7 +243,7 @@
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-email">
-          E-mail
+          E-mail *
         </label>
 
         <input
@@ -237,22 +259,22 @@
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-phone">
-          Телефон
+          Телефон *
         </label>
 
         <input
           class="order-form__input"
-          id="order-phone"
+          id="order-phone" aria-describedby="order-phone-hint"
           name="phone"
           type="tel"
           inputmode="tel"
           placeholder="+7 (900) 000-00-00"
-          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+          autocomplete="tel"
           required
         >
 
-        <small class="order-form__hint">
-          Формат: +7 (900) 000-00-00
+        <small class="order-form__hint" id="order-phone-hint">
+          Например: +7 (900) 000-00-00. Можно вводить без скобок.
         </small>
       </div>
 
@@ -271,7 +293,7 @@
 
       <div class="order-form__field">
         <label class="order-form__label" for="order-topic">
-          Направление
+          Направление *
         </label>
 
         <select
@@ -287,7 +309,7 @@
         </select>
       </div>
 
-      <div class="order-form__field">
+      <div class="order-form__field order-form__field--wide">
         <label class="order-form__label" for="order-comment">
           Комментарий
         </label>
@@ -301,7 +323,7 @@
         ></textarea>
       </div>
 
-      <div class="order-form__field">
+      <div class="order-form__field order-form__field--wide">
         <label class="order-form__label" for="order-agreement">
           <input
             class="order-form__checkbox"
@@ -330,8 +352,8 @@
     </form>
   </dialog>
 
-  <p class="success-message" id="success-message" hidden>
-    Заявка успешно отправлена!
+  <p class="success-message" role="status" tabindex="-1" id="success-message" hidden>
+    Демонстрация: форма заполнена корректно. Данные никуда не отправлены.
   </p>
 </body>
 </html>

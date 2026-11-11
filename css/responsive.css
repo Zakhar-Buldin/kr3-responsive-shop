@@ -1,0 +1,389 @@
+/* КР №3: Mobile First. Подключается после style.css из КР №1. */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+picture {
+  display: block;
+  min-width: 0;
+}
+main {
+  padding: 24px 16px;
+}
+main > *, .catalog-layout > *, .product-details > * {
+  min-width: 0;
+}
+h1 {
+  font-size: clamp(28px, 4vw, 40px);
+}
+h2 {
+  font-size: clamp(23px, 3vw, 30px);
+}
+p, h1, h2, h3, a, th, td {
+  overflow-wrap: anywhere;
+}
+section[id] {
+  scroll-margin-top: 24px;
+}
+.button, .menu-toggle, .dialog-close, summary {
+  min-height: 44px;
+}
+.button {
+  max-width: 100%;
+}
+
+/* Фокус и ссылка пропуска к содержимому. */
+:focus-visible {
+  outline: 3px solid #593a86;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 3px #fff;
+}
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  transform: translateY(-160%);
+  z-index: 1000;
+  padding: 12px 16px;
+  background: #fff;
+  color: #272039;
+  border-radius: 6px;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+#main:focus {
+  outline: none;
+}
+/* Цель skip-link, не интерактивный элемент. */
+
+/* Flexbox: шапка и меню. Без JS ссылки доступны. */
+.site-header {
+  padding: 20px 16px;
+}
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.site-header__logo {
+  margin: 0;
+  font-size: 52px;
+  text-align: left;
+}
+.menu-toggle {
+  margin-left: auto;
+  padding: 10px 18px;
+  font: inherit;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #e7dff2;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.site-nav {
+  width: 100%;
+}
+.site-nav__list {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+}
+.site-nav__link {
+  display: block;
+  min-height: 44px;
+}
+.site-nav--enhanced:not(.site-nav--open) {
+  display: none;
+}
+
+/* Grid: на телефоне одна колонка. */
+.hero {
+  display: grid;
+  gap: 24px;
+  padding: 24px;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 42px);
+}
+.hero p {
+  font-size: 17px;
+}
+.hero__image {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.products-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+.product-card {
+  min-width: 0;
+  padding: 20px;
+}
+.product-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.advantages-list {
+  display: grid;
+  gap: 12px;
+}
+
+/* Фильтры над каталогом; details доступен без JS. */
+.catalog-layout {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'filters' 'products';
+}
+.catalog-filters {
+  padding: 20px;
+}
+.filter-panel summary {
+  padding: 10px 0;
+  cursor: pointer;
+  color: var(--color-primary-dark);
+  font-weight: bold;
+}
+.filter-panel[open] summary {
+  margin-bottom: 12px;
+}
+.catalog-filters__label {
+  padding-block: 6px;
+}
+.catalog-filters__input {
+  min-height: 44px;
+}
+.catalog-filters__checkbox, .order-form__checkbox {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  accent-color: var(--color-primary-dark);
+}
+.product-details {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 20px;
+  gap: 24px;
+}
+.product-details__image {
+  max-height: 440px;
+  object-fit: cover;
+}
+.product-details__badge {
+  max-width: calc(100% - 32px);
+}
+
+/* Мобильные карточки характеристик. Сохраняем table/th/scope и явные роли. */
+.table-wrapper {
+  width: 100%;
+}
+.product-table, .product-table tbody {
+  display: block;
+}
+.product-table caption {
+  display: block;
+}
+.product-table thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.product-table tbody {
+  display: grid;
+  gap: 12px;
+}
+.product-table tbody tr {
+  display: grid;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-table tbody th, .product-table tbody td {
+  display: block;
+  padding: 10px 16px;
+  border: 0;
+}
+.product-table tbody th {
+  color: var(--color-primary-dark);
+  background: var(--color-surface-accent);
+}
+.product-table tbody td {
+  background: #fff;
+}
+
+/* Формы: широкие поля, перенос кнопок, прокрутка диалога. */
+.order-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+.order-form__field {
+  min-width: 0;
+  margin: 0;
+}
+.order-form__input, .order-form__select, .order-form__textarea {
+  min-width: 0;
+  min-height: 44px;
+  font-size: 16px;
+}
+.order-form__textarea {
+  min-height: 120px;
+}
+.order-form__actions {
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.order-form__actions .button {
+  flex: 1 1 180px;
+}
+.order-form__field--wide, .order-form__actions, .form-note {
+  grid-column: 1 / -1;
+}
+.form-note {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+.order-form--page {
+  padding: 20px;
+}
+.order-dialog {
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  padding: 20px;
+}
+.dialog-close {
+  display: block;
+  margin-left: auto;
+  width: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--color-primary-dark);
+  font-size: 28px;
+  cursor: pointer;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+.success-message:focus {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 3px;
+}
+
+/* 640px: две карточки и обычная таблица. */
+@media (min-width: 640px) {
+  main {
+    padding: 32px 24px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .advantages-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  .product-table {
+    display: table;
+  }
+  .product-table caption {
+    display: table-caption;
+  }
+  .product-table thead {
+    position: static;
+    display: table-header-group;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+  .product-table tbody {
+    display: table-row-group;
+  }
+  .product-table tbody tr {
+    display: table-row;
+  }
+  .product-table tbody th, .product-table tbody td {
+    display: table-cell;
+    border: 1px solid var(--color-border);
+    padding: 16px;
+  }
+}
+/* 768px: горизонтальное меню, двухколоночная форма страницы. */
+@media (min-width: 768px) {
+  .site-header__logo {
+    margin-inline: auto;
+    font-size: 64px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .site-nav--enhanced:not(.site-nav--open) {
+    display: block;
+  }
+  .site-nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .order-form--page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 24px;
+  }
+  .hero {
+    padding: 32px;
+  }
+}
+/* 900px: фотография и текст рядом. */
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .product-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 24px;
+  }
+}
+/* 1100px: боковой фильтр и три карточки. */
+@media (min-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .catalog-layout {
+    grid-template-columns: 250px minmax(0, 1fr);
+    grid-template-areas: 'filters products';
+  }
+  .catalog-filters {
+    position: sticky;
+    top: 24px;
+  }
+  .catalog-layout .products-grid {
+    gap: 16px;
+  }
+  .catalog-layout .product-card {
+    padding: 16px;
+  }
+}
+/* Системная настройка уменьшения движения. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

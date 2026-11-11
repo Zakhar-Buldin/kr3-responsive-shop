@@ -1,0 +1,240 @@
+{
+  "checkedAt": "2026-11-11T09:14:12.260Z",
+  "results": [
+    {
+      "name": "index",
+      "width": 360,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "catalog",
+      "width": 360,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "product",
+      "width": 360,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "order",
+      "width": 360,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "contacts",
+      "width": 360,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "index",
+      "width": 430,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "catalog",
+      "width": 430,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "product",
+      "width": 430,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "order",
+      "width": 430,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "contacts",
+      "width": 430,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "index",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "catalog",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "product",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "order",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "contacts",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "index",
+      "width": 1024,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "catalog",
+      "width": 1024,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "product",
+      "width": 1024,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "order",
+      "width": 1024,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "contacts",
+      "width": 1024,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "index",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "catalog",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "product",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "order",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "contacts",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "missingImages": [],
+      "unlabelled": [],
+      "duplicateIds": []
+    }
+  ],
+  "scenarios": [
+    "skip-link",
+    "menu and Escape",
+    "dialog focus containment and restoration",
+    "course preselection",
+    "filters and reset",
+    "empty state",
+    "form validation and demo confirmation"
+  ],
+  "errors": []
+}

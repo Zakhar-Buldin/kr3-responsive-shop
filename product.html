@@ -27,13 +27,17 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Аккорд</a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Меню</button>
+      <nav id="main-nav" class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link" href="index.html">
@@ -49,7 +53,7 @@
 
           <li class="site-nav__item">
             <a
-              class="site-nav__link site-nav__link--active"
+              class="site-nav__link site-nav__link--active" aria-current="page"
               href="product.html"
             >
               О курсе
@@ -78,7 +82,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">
         Главная
@@ -93,23 +97,23 @@
       </span>
     </nav>
 
+    <section class="section"><h1>Курсы музыкальной школы</h1><p>Выберите направление и познакомьтесь с условиями обучения.</p></section>
     <section class="product-details" id="guitar">
       <div class="product-details__image-wrapper">
         <span class="product-details__badge">
           Популярное
         </span>
 
-        <img
-          class="product-details__image"
-          src="images/guitar.jpg"
-          alt="Занятие по игре на гитаре"
-        >
+        <picture>
+  <source type="image/webp" srcset="images/guitar-360.webp 360w, images/guitar-720.webp 720w" sizes="(min-width: 900px) 480px, 85vw">
+  <img class="product-details__image" src="images/guitar.jpg" alt="Гитара" width="735" height="939" loading="lazy" decoding="async">
+</picture>
       </div>
 
       <div class="product-details__content">
-        <h1 class="product-details__title">
+        <h2 class="product-details__title">
           Курс игры на гитаре
-        </h1>
+        </h2>
 
         <p class="product-details__description">
           Индивидуальные занятия по игре на акустической
@@ -138,50 +142,50 @@
     <section class="section">
       <h2>Характеристики курса по гитаре</h2>
 
-      <table class="product-table">
+      <div class="table-wrapper"><table class="product-table" role="table">
         <caption>
           Основная информация о курсе
         </caption>
 
-        <thead>
-          <tr>
-            <th>Параметр</th>
-            <th>Значение</th>
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col" role="columnheader">Параметр</th>
+            <th scope="col" role="columnheader">Значение</th>
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td>Направление</td>
-            <td>Гитара</td>
+        <tbody role="rowgroup">
+          <tr role="row">
+            <th scope="row" role="rowheader">Направление</th>
+            <td role="cell">Гитара</td>
           </tr>
 
-          <tr>
-            <td>Возраст</td>
-            <td>от 8 лет</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Возраст</th>
+            <td role="cell">от 8 лет</td>
           </tr>
 
-          <tr>
-            <td>Уровень подготовки</td>
-            <td>Любой</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Уровень подготовки</th>
+            <td role="cell">Любой</td>
           </tr>
 
-          <tr>
-            <td>Формат занятий</td>
-            <td>Индивидуальный</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Формат занятий</th>
+            <td role="cell">Индивидуальный</td>
           </tr>
 
-          <tr>
-            <td>Продолжительность</td>
-            <td>60 минут</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Продолжительность</th>
+            <td role="cell">60 минут</td>
           </tr>
 
-          <tr>
-            <td>Стоимость</td>
-            <td>от 1500 руб.</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Стоимость</th>
+            <td role="cell">от 1500 руб.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
 
     <section class="product-details" id="piano">
@@ -190,11 +194,10 @@
           Для любого уровня
         </span>
 
-        <img
-          class="product-details__image"
-          src="images/piano.jpg"
-          alt="Занятие по игре на фортепиано"
-        >
+        <picture>
+  <source type="image/webp" srcset="images/piano-360.webp 360w, images/piano-720.webp 720w" sizes="(min-width: 900px) 480px, 85vw">
+  <img class="product-details__image" src="images/piano.jpg" alt="Фортепиано" width="736" height="981" loading="lazy" decoding="async">
+</picture>
       </div>
 
       <div class="product-details__content">
@@ -228,50 +231,50 @@
     <section class="section">
       <h2>Характеристики курса по фортепиано</h2>
 
-      <table class="product-table">
+      <div class="table-wrapper"><table class="product-table" role="table">
         <caption>
           Основная информация о курсе
         </caption>
 
-        <thead>
-          <tr>
-            <th>Параметр</th>
-            <th>Значение</th>
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col" role="columnheader">Параметр</th>
+            <th scope="col" role="columnheader">Значение</th>
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td>Направление</td>
-            <td>Фортепиано</td>
+        <tbody role="rowgroup">
+          <tr role="row">
+            <th scope="row" role="rowheader">Направление</th>
+            <td role="cell">Фортепиано</td>
           </tr>
 
-          <tr>
-            <td>Возраст</td>
-            <td>от 6 лет</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Возраст</th>
+            <td role="cell">от 6 лет</td>
           </tr>
 
-          <tr>
-            <td>Уровень подготовки</td>
-            <td>Любой</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Уровень подготовки</th>
+            <td role="cell">Любой</td>
           </tr>
 
-          <tr>
-            <td>Формат занятий</td>
-            <td>Индивидуальный</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Формат занятий</th>
+            <td role="cell">Индивидуальный</td>
           </tr>
 
-          <tr>
-            <td>Продолжительность</td>
-            <td>60 минут</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Продолжительность</th>
+            <td role="cell">60 минут</td>
           </tr>
 
-          <tr>
-            <td>Стоимость</td>
-            <td>от 1700 руб.</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Стоимость</th>
+            <td role="cell">от 1700 руб.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
 
     <section class="product-details" id="vocal">
@@ -280,11 +283,10 @@
           Популярное
         </span>
 
-        <img
-          class="product-details__image"
-          src="images/vocal.jpg"
-          alt="Занятие по вокалу"
-        >
+        <picture>
+  <source type="image/webp" srcset="images/vocal-360.webp 360w, images/vocal-720.webp 720w" sizes="(min-width: 900px) 480px, 85vw">
+  <img class="product-details__image" src="images/vocal.jpg" alt="Вокал" width="1018" height="1018" loading="lazy" decoding="async">
+</picture>
       </div>
 
       <div class="product-details__content">
@@ -318,50 +320,50 @@
     <section class="section">
       <h2>Характеристики курса по вокалу</h2>
 
-      <table class="product-table">
+      <div class="table-wrapper"><table class="product-table" role="table">
         <caption>
           Основная информация о курсе
         </caption>
 
-        <thead>
-          <tr>
-            <th>Параметр</th>
-            <th>Значение</th>
+        <thead role="rowgroup">
+          <tr role="row">
+            <th scope="col" role="columnheader">Параметр</th>
+            <th scope="col" role="columnheader">Значение</th>
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
-            <td>Направление</td>
-            <td>Вокал</td>
+        <tbody role="rowgroup">
+          <tr role="row">
+            <th scope="row" role="rowheader">Направление</th>
+            <td role="cell">Вокал</td>
           </tr>
 
-          <tr>
-            <td>Возраст</td>
-            <td>от 7 лет</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Возраст</th>
+            <td role="cell">от 7 лет</td>
           </tr>
 
-          <tr>
-            <td>Уровень подготовки</td>
-            <td>Любой</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Уровень подготовки</th>
+            <td role="cell">Любой</td>
           </tr>
 
-          <tr>
-            <td>Формат занятий</td>
-            <td>Индивидуальный</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Формат занятий</th>
+            <td role="cell">Индивидуальный</td>
           </tr>
 
-          <tr>
-            <td>Продолжительность</td>
-            <td>60 минут</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Продолжительность</th>
+            <td role="cell">60 минут</td>
           </tr>
 
-          <tr>
-            <td>Стоимость</td>
-            <td>от 1600 руб.</td>
+          <tr role="row">
+            <th scope="row" role="rowheader">Стоимость</th>
+            <td role="cell">от 1600 руб.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
 
     <!-- Доп. инфомарция -->

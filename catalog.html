@@ -25,13 +25,17 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Аккорд</a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Меню</button>
+      <nav id="main-nav" class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link" href="index.html">
@@ -41,7 +45,7 @@
 
           <li class="site-nav__item">
             <a
-              class="site-nav__link site-nav__link--active"
+              class="site-nav__link site-nav__link--active" aria-current="page"
               href="catalog.html"
             >
               Направления
@@ -76,7 +80,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- Breadcrumbs — это навигационная цепочка, показывающая путь пользователя внутри сайта: Главная / Направления -->
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">
@@ -100,7 +104,9 @@
 
     <section class="catalog-layout">
       <aside class="catalog-filters">
-        <h2 class="catalog-filters__title">Фильтры</h2>
+        <h2 class="catalog-filters__title">Подбор курса</h2>
+        <details class="filter-panel" open>
+          <summary>Фильтры направлений</summary>
 
         <form class="catalog-filters__form" action="#" method="get">
           <fieldset class="catalog-filters__group">
@@ -113,7 +119,7 @@
                 class="catalog-filters__checkbox"
                 type="checkbox"
                 name="category"
-                value="all"
+                value="all" checked
               >
               Все направления
             </label>
@@ -174,14 +180,22 @@
           <button class="button button--primary" type="submit">
             Применить
           </button>
+        <button class="button button--secondary" type="reset">Сбросить</button>
         </form>
+        </details>
       </aside>
 
       <section class="catalog-layout__products">
         <h2>Наши направления</h2>
+        <p id="filter-result" role="status">Показано направлений: 3</p>
+        <p id="filter-empty" hidden>По этим условиям нет курсов. Измените фильтры или нажмите «Сбросить».</p>
 
         <div class="products-grid">
-          <article class="product-card product-card--featured">
+          <article class="product-card product-card--featured" data-category="instruments" data-price="1500">
+<picture>
+  <source type="image/webp" srcset="images/guitar-360.webp 360w, images/guitar-720.webp 720w" sizes="(min-width: 1100px) 250px, (min-width: 640px) 40vw, 85vw">
+  <img class="product-card__image" src="images/guitar.jpg" alt="Гитара" width="735" height="939" loading="lazy" decoding="async">
+</picture>
             <h3 class="product-card__title">
               Гитара
             </h3>
@@ -203,7 +217,11 @@
             </a>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-category="instruments" data-price="1700">
+<picture>
+  <source type="image/webp" srcset="images/piano-360.webp 360w, images/piano-720.webp 720w" sizes="(min-width: 1100px) 250px, (min-width: 640px) 40vw, 85vw">
+  <img class="product-card__image" src="images/piano.jpg" alt="Фортепиано" width="736" height="981" loading="lazy" decoding="async">
+</picture>
             <h3 class="product-card__title">
               Фортепиано
             </h3>
@@ -225,7 +243,11 @@
             </a>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-category="vocal" data-price="1600">
+<picture>
+  <source type="image/webp" srcset="images/vocal-360.webp 360w, images/vocal-720.webp 720w" sizes="(min-width: 1100px) 250px, (min-width: 640px) 40vw, 85vw">
+  <img class="product-card__image" src="images/vocal.jpg" alt="Вокал" width="1018" height="1018" loading="lazy" decoding="async">
+</picture>
             <h3 class="product-card__title">
               Вокал
             </h3>
@@ -258,4 +280,3 @@
 </body>
 </html>
 
-<!-- Yggdrasil :з -->

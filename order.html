@@ -24,14 +24,17 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">Аккорд</a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Меню</button>
+      <nav id="main-nav" class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link" href="index.html">
@@ -53,7 +56,7 @@
 
           <li class="site-nav__item">
             <a
-              class="site-nav__link site-nav__link--active"
+              class="site-nav__link site-nav__link--active" aria-current="page"
               href="order.html"
             >
               Запись
@@ -76,7 +79,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- Breadcrumbs — это навигационная цепочка, показывающая путь пользователя внутри сайта: Главная / Запись -->
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">
@@ -97,8 +100,7 @@
       </p>
 
       <p>
-        После отправки заявки администратор школы
-        свяжется с вами для согласования времени занятия.
+        Это учебная форма: данные проверяются только в браузере и не отправляются.
       </p>
     </section>
 
@@ -108,10 +110,11 @@
         id="page-order-form"
         action="#"
         method="post">
+      <p class="form-note">* — обязательные поля. Учебная форма, данные не отправляются.</p>
         <div class="order-form__field">
           <label class="order-form__label" for="student-name">
-            Имя
-          </label>
+            Имя *
+        </label>
 
           <input
             class="order-form__input"
@@ -127,8 +130,8 @@
 
         <div class="order-form__field">
           <label class="order-form__label" for="student-email">
-            E-mail
-          </label>
+            E-mail *
+        </label>
 
           <input
             class="order-form__input"
@@ -143,29 +146,29 @@
 
         <div class="order-form__field">
           <label class="order-form__label" for="student-phone">
-            Телефон
-          </label>
+            Телефон *
+        </label>
 
           <input
             class="order-form__input"
-            id="student-phone"
+            id="student-phone" aria-describedby="student-phone-hint"
             name="phone"
             type="tel"
             inputmode="tel"
             placeholder="+7 (900) 000-00-00"
-            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            autocomplete="tel"
             required
           >
 
-          <small class="order-form__hint">
-            Формат: +7 (900) 000-00-00
+          <small class="order-form__hint" id="student-phone-hint">
+            Например: +7 (900) 000-00-00. Можно вводить без скобок.
           </small>
         </div>
 
         <div class="order-form__field">
           <label class="order-form__label" for="student-course">
-            Направление
-          </label>
+            Направление *
+        </label>
 
           <select
             class="order-form__select"
@@ -209,7 +212,7 @@
           >
         </div>
 
-        <div class="order-form__field">
+        <div class="order-form__field order-form__field--wide">
           <label class="order-form__label" for="student-comment">
             Комментарий
           </label>
@@ -223,7 +226,7 @@
           ></textarea>
         </div>
 
-        <div class="order-form__field">
+        <div class="order-form__field order-form__field--wide">
           <label class="order-form__label">
             <input
               class="order-form__checkbox"
@@ -248,12 +251,11 @@
       </form>
 
       <p
-        class="success-message"
+        class="success-message" role="status" tabindex="-1"
         id="page-success-message"
         hidden
       >
-        Спасибо! Заявка успешно отправлена.
-        Администратор свяжется с вами для согласования времени занятия.
+        Демонстрация: форма заполнена корректно. Данные никуда не отправлены.
       </p>
     </section>
 
