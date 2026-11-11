@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Cтрока нужна для правильного отображения страницы на телефонах и планшетах -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Музыкальная школа Аккорд — занятия музыкой для детей и взрослых.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Музыкальная школа Аккорд">
+  <meta property="og:description" content="Занятия вокалом, гитарой и фортепиано для детей и взрослых.">
+  <meta property="og:image" content="https://zakhar-buldin.github.io/kr1-html-css-shop/images/guitar.jpg">
+
+  <title>Музыкальная школа Аккорд</title>
+
+  <!-- Подключение стилей -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Подключение JavaScript-файла -->
+  <!-- defer позволяет не блокировать разбор HTML и гарантирует выполнение скрипта после построения документа-->
+  <script src="js/main.js" defer></script>
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Аккорд</a>
+
+      <!-- Блок навигации, в котором находятся основные ссылки по сайту или странице -->
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="index.html">
+              Главная
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">
+              Направления
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">
+              О курсе
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">
+              Запись
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">
+              Контакты
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#advantages">
+              Преимущества
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Музыкальная школа «Аккорд»</h1>
+
+      <p>
+        Занятия музыкой для детей и взрослых.
+        Помогаем освоить инструмент, развить голос
+        и получать удовольствие от музыки.
+      </p>
+
+      <a class="button button--primary" href="#popular">
+        Выбрать направление
+      </a>
+    </section>
+
+    <section class="section" id="advantages">
+      <h2>Почему выбирают нашу школу</h2>
+
+      <ul class="advantages-list">
+        <li>индивидуальные занятия с преподавателем;</li>
+        <li>обучение детей и взрослых с любого уровня;</li>
+        <li>удобное расписание занятий;</li>
+        <li>возможность записаться на пробное занятие.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="popular">
+      <h2>Популярные направления</h2>
+
+      <div class="products-grid">
+        <article class="product-card product-card--featured">
+          <h3 class="product-card__title">Гитара</h3>
+
+          <p class="product-card__description">
+            Индивидуальные занятия для начинающих и продолжающих учеников.
+          </p>
+
+          <p class="product-card__price">
+            от 1500 руб. / занятие
+          </p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Гитара"
+          >
+            Записаться
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-card__title">Фортепиано</h3>
+
+          <p class="product-card__description">
+            Обучение игре на фортепиано, развитие слуха и чувства ритма.
+          </p>
+
+          <p class="product-card__price">
+            от 1700 руб. / занятие
+          </p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Фортепиано"
+          >
+            Записаться
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-card__title">Вокал</h3>
+
+          <p class="product-card__description">
+            Постановка голоса, работа с дыханием и любимыми композициями.
+          </p>
+
+          <p class="product-card__price">
+            от 1600 руб. / занятие
+          </p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Вокал"
+          >
+            Записаться
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <aside class="aside-info">
+      <h2>Пробное занятие</h2>
+
+      <p>
+        Если вы пока не определились с направлением,
+        преподаватель поможет оценить уровень подготовки
+        и подобрать подходящую программу обучения.
+      </p>
+
+      <a class="button button--primary" href="order.html">
+        Записаться на занятие
+      </a>
+    </aside>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <!-- &copy - HTML-сущность символа авторского права -->
+    <p>&copy; 2026 Музыкальная школа «Аккорд».</p>
+    <p>Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+  </footer>
+
+  <!-- Форма записи на урок -->
+  <dialog
+    class="order-dialog"
+    id="order-dialog"
+    aria-labelledby="order-dialog-title"
+  >
+    <h2 class="order-dialog__title" id="order-dialog-title">
+      Запись на пробное занятие
+    </h2>
+    
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">
+          Имя
+        </label>
+
+        <input
+          class="order-form__input"
+          id="order-name"
+          name="name"
+          type="text"
+          placeholder="Введите ваше имя"
+          minlength="2"
+          autocomplete="given-name"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">
+          E-mail
+        </label>
+
+        <input
+          class="order-form__input"
+          id="order-email"
+          name="email"
+          type="email"
+          placeholder="example@mail.ru"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">
+          Телефон
+        </label>
+
+        <input
+          class="order-form__input"
+          id="order-phone"
+          name="phone"
+          type="tel"
+          inputmode="tel"
+          placeholder="+7 (900) 000-00-00"
+          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+          required
+        >
+
+        <small class="order-form__hint">
+          Формат: +7 (900) 000-00-00
+        </small>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-date">
+          Желаемая дата
+        </label>
+
+        <input
+          class="order-form__input"
+          id="order-date"
+          name="date"
+          type="date"
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">
+          Направление
+        </label>
+
+        <select
+          class="order-form__select"
+          id="order-topic"
+          name="topic"
+          required
+        >
+          <option value="">Выберите направление</option>
+          <option value="guitar">Гитара</option>
+          <option value="piano">Фортепиано</option>
+          <option value="vocal">Вокал</option>
+        </select>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">
+          Комментарий
+        </label>
+
+        <textarea
+          class="order-form__textarea"
+          id="order-comment"
+          name="comment"
+          rows="4"
+          placeholder="Укажите дополнительную информацию"
+        ></textarea>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-agreement">
+          <input
+            class="order-form__checkbox"
+            id="order-agreement"
+            name="agreement"
+            type="checkbox"
+            required
+          >
+          Я согласен на обработку данных
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button
+          class="button button--secondary"
+          type="button"
+          id="close-order-dialog"
+        >
+          Закрыть
+        </button>
+
+        <button class="button button--primary" type="submit">
+          Отправить заявку
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden>
+    Заявка успешно отправлена!
+  </p>
+</body>
+</html>

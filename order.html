@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Запись на пробное занятие в музыкальной школе Аккорд."
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Запись на занятие — Музыкальная школа Аккорд">
+  <meta
+    property="og:description"
+    content="Форма записи на пробное занятие в музыкальной школе Аккорд."
+  >
+
+  <title>Запись на занятие — Музыкальная школа Аккорд</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Аккорд</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">
+              Главная
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">
+              Направления
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">
+              О курсе
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link site-nav__link--active"
+              href="order.html"
+            >
+              Запись
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">
+              Контакты
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">
+              Преимущества
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumbs — это навигационная цепочка, показывающая путь пользователя внутри сайта: Главная / Запись -->
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">
+        Главная
+      </a>
+
+      <span class="breadcrumbs__current">
+        Запись
+      </span>
+    </nav>
+
+    <section class="section">
+      <h1>Запись на пробное занятие</h1>
+
+      <p>
+        Заполните форму, выберите интересующее направление
+        и укажите контактные данные.
+      </p>
+
+      <p>
+        После отправки заявки администратор школы
+        свяжется с вами для согласования времени занятия.
+      </p>
+    </section>
+
+    <section class="order-section">
+      <form
+        class="order-form order-form--page"
+        id="page-order-form"
+        action="#"
+        method="post">
+        <div class="order-form__field">
+          <label class="order-form__label" for="student-name">
+            Имя
+          </label>
+
+          <input
+            class="order-form__input"
+            id="student-name"
+            name="name"
+            type="text"
+            placeholder="Введите ваше имя"
+            minlength="2"
+            autocomplete="given-name"
+            required
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="student-email">
+            E-mail
+          </label>
+
+          <input
+            class="order-form__input"
+            id="student-email"
+            name="email"
+            type="email"
+            placeholder="example@mail.ru"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="student-phone">
+            Телефон
+          </label>
+
+          <input
+            class="order-form__input"
+            id="student-phone"
+            name="phone"
+            type="tel"
+            inputmode="tel"
+            placeholder="+7 (900) 000-00-00"
+            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            required
+          >
+
+          <small class="order-form__hint">
+            Формат: +7 (900) 000-00-00
+          </small>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="student-course">
+            Направление
+          </label>
+
+          <select
+            class="order-form__select"
+            id="student-course"
+            name="course"
+            required
+          >
+            <option value="">Выберите направление</option>
+            <option value="guitar">Гитара</option>
+            <option value="piano">Фортепиано</option>
+            <option value="vocal">Вокал</option>
+          </select>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="student-age">
+            Возраст ученика
+          </label>
+
+          <input
+            class="order-form__input"
+            id="student-age"
+            name="age"
+            type="number"
+            min="5"
+            max="100"
+            placeholder="Укажите возраст"
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="lesson-date">
+            Желаемая дата
+          </label>
+
+          <input
+            class="order-form__input"
+            id="lesson-date"
+            name="date"
+            type="date"
+          >
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label" for="student-comment">
+            Комментарий
+          </label>
+
+          <textarea
+            class="order-form__textarea"
+            id="student-comment"
+            name="comment"
+            rows="5"
+            placeholder="Укажите дополнительную информацию"
+          ></textarea>
+        </div>
+
+        <div class="order-form__field">
+          <label class="order-form__label">
+            <input
+              class="order-form__checkbox"
+              id="student-agreement"
+              name="agreement"
+              type="checkbox"
+              required
+            >
+            Я согласен на обработку данных
+          </label>
+        </div>
+
+        <div class="order-form__actions">
+          <button class="button button--primary" type="submit">
+            Отправить заявку
+          </button>
+
+          <a class="button button--secondary" href="catalog.html">
+            Вернуться к направлениям
+          </a>
+        </div>
+      </form>
+
+      <p
+        class="success-message"
+        id="page-success-message"
+        hidden
+      >
+        Спасибо! Заявка успешно отправлена.
+        Администратор свяжется с вами для согласования времени занятия.
+      </p>
+    </section>
+
+    <!-- Доп.информация -->
+    <aside class="aside-info">
+      <h2>Что будет после записи</h2>
+
+      <p>
+        Администратор уточнит выбранное направление,
+        удобное время и ответит на вопросы
+        по организации первого занятия.
+      </p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Музыкальная школа «Аккорд».</p>
+    <p>Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+  </footer>
+</body>
+</html>

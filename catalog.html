@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Направления обучения музыкальной школы Аккорд."
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Направления обучения — Музыкальная школа Аккорд">
+  <meta
+    property="og:description"
+    content="Гитара, фортепиано и вокал для детей и взрослых."
+  >
+  
+  <title>Направления обучения — Музыкальная школа Аккорд</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Аккорд</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">
+              Главная
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link site-nav__link--active"
+              href="catalog.html"
+            >
+              Направления
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="product.html">
+              О курсе
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">
+              Запись
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">
+              Контакты
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">
+              Преимущества
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumbs — это навигационная цепочка, показывающая путь пользователя внутри сайта: Главная / Направления -->
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">
+        Главная
+      </a>
+
+      <span class="breadcrumbs__current">
+        Направления
+      </span>
+    </nav>
+
+    <section class="section">
+      <h1>Направления обучения</h1>
+
+      <p>
+        Выберите музыкальное направление.
+        Занятия подходят для детей и взрослых
+        с любым уровнем подготовки.
+      </p>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2 class="catalog-filters__title">Фильтры</h2>
+
+        <form class="catalog-filters__form" action="#" method="get">
+          <fieldset class="catalog-filters__group">
+            <legend class="catalog-filters__legend">
+              Направление
+            </legend>
+
+            <label class="catalog-filters__label">
+              <input
+                class="catalog-filters__checkbox"
+                type="checkbox"
+                name="category"
+                value="all"
+              >
+              Все направления
+            </label>
+
+            <label class="catalog-filters__label">
+              <input
+                class="catalog-filters__checkbox"
+                type="checkbox"
+                name="category"
+                value="instruments"
+              >
+              Инструменты
+            </label>
+
+            <label class="catalog-filters__label">
+              <input
+                class="catalog-filters__checkbox"
+                type="checkbox"
+                name="category"
+                value="vocal"
+              >
+              Вокал
+            </label>
+          </fieldset>
+
+          <fieldset class="catalog-filters__group">
+            <legend class="catalog-filters__legend">
+              Стоимость занятия
+            </legend>
+
+            <label class="catalog-filters__label" for="price-from">
+              От
+            </label>
+
+            <input
+              class="catalog-filters__input"
+              id="price-from"
+              name="price-from"
+              type="number"
+              min="0"
+              placeholder="1000"
+            >
+
+            <label class="catalog-filters__label" for="price-to">
+              До
+            </label>
+
+            <input
+              class="catalog-filters__input"
+              id="price-to"
+              name="price-to"
+              type="number"
+              min="0"
+              placeholder="3000"
+            >
+          </fieldset>
+
+          <button class="button button--primary" type="submit">
+            Применить
+          </button>
+        </form>
+      </aside>
+
+      <section class="catalog-layout__products">
+        <h2>Наши направления</h2>
+
+        <div class="products-grid">
+          <article class="product-card product-card--featured">
+            <h3 class="product-card__title">
+              Гитара
+            </h3>
+
+            <p class="product-card__description">
+              Обучение игре на акустической и электрогитаре
+              с любого уровня подготовки.
+            </p>
+
+            <p class="product-card__price">
+              от 1500 руб. / занятие
+            </p>
+            <!-- Якорная ссылка на другую страницу -->
+            <a
+              class="button button--primary product-card__button"
+              href="product.html#guitar"
+            >
+              Подробнее
+            </a>
+          </article>
+
+          <article class="product-card">
+            <h3 class="product-card__title">
+              Фортепиано
+            </h3>
+
+            <p class="product-card__description">
+              Индивидуальные занятия, развитие слуха,
+              техники и чувства ритма.
+            </p>
+
+            <p class="product-card__price">
+              от 1700 руб. / занятие
+            </p>
+            <!-- Якорная ссылка на другую страницу -->
+            <a
+              class="button button--primary product-card__button"
+              href="product.html#piano"
+            >
+              Подробнее
+            </a>
+          </article>
+
+          <article class="product-card">
+            <h3 class="product-card__title">
+              Вокал
+            </h3>
+
+            <p class="product-card__description">
+              Постановка голоса, работа с дыханием
+              и исполнение любимых композиций.
+            </p>
+
+            <p class="product-card__price">
+              от 1600 руб. / занятие
+            </p>
+            <!-- Якорная ссылка на другую страницу -->
+            <a
+              class="button button--primary product-card__button"
+              href="product.html#vocal"
+            >
+              Подробнее
+            </a>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Музыкальная школа «Аккорд».</p>
+    <p>Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+  </footer>
+</body>
+</html>
+
+<!-- Yggdrasil :з -->

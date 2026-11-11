@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Курсы музыкальной школы Аккорд: гитара, фортепиано и вокал."
+  >
+
+  <meta property="og:type" content="website">
+  <meta
+    property="og:title"
+    content="Курсы — Музыкальная школа Аккорд"
+  >
+  <meta
+    property="og:description"
+    content="Подробная информация о музыкальных направлениях школы Аккорд."
+  >
+
+  <title>Курсы — Музыкальная школа Аккорд</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Аккорд</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">
+              Главная
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">
+              Направления
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link site-nav__link--active"
+              href="product.html"
+            >
+              О курсе
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">
+              Запись
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">
+              Контакты
+            </a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">
+              Преимущества
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">
+        Главная
+      </a>
+
+      <a class="breadcrumbs__link" href="catalog.html">
+        Направления
+      </a>
+
+      <span class="breadcrumbs__current">
+        Курсы
+      </span>
+    </nav>
+
+    <section class="product-details" id="guitar">
+      <div class="product-details__image-wrapper">
+        <span class="product-details__badge">
+          Популярное
+        </span>
+
+        <img
+          class="product-details__image"
+          src="images/guitar.jpg"
+          alt="Занятие по игре на гитаре"
+        >
+      </div>
+
+      <div class="product-details__content">
+        <h1 class="product-details__title">
+          Курс игры на гитаре
+        </h1>
+
+        <p class="product-details__description">
+          Индивидуальные занятия по игре на акустической
+          и электрогитаре для детей и взрослых.
+          Курс подходит как начинающим, так и тем,
+          кто уже имеет опыт игры.
+        </p>
+
+        <p>
+          На занятиях ученик осваивает правильную постановку рук,
+          основные аккорды, ритмические рисунки
+          и учится исполнять любимые композиции.
+        </p>
+
+        <p class="product-details__price">
+          от 1500 руб. / занятие
+        </p>
+
+        <!-- Ссылка на страницу Записи на урок -->
+        <a class="button button--primary" href="order.html">
+          Записаться на пробное занятие
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Характеристики курса по гитаре</h2>
+
+      <table class="product-table">
+        <caption>
+          Основная информация о курсе
+        </caption>
+
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Направление</td>
+            <td>Гитара</td>
+          </tr>
+
+          <tr>
+            <td>Возраст</td>
+            <td>от 8 лет</td>
+          </tr>
+
+          <tr>
+            <td>Уровень подготовки</td>
+            <td>Любой</td>
+          </tr>
+
+          <tr>
+            <td>Формат занятий</td>
+            <td>Индивидуальный</td>
+          </tr>
+
+          <tr>
+            <td>Продолжительность</td>
+            <td>60 минут</td>
+          </tr>
+
+          <tr>
+            <td>Стоимость</td>
+            <td>от 1500 руб.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="product-details" id="piano">
+      <div class="product-details__image-wrapper">
+        <span class="product-details__badge">
+          Для любого уровня
+        </span>
+
+        <img
+          class="product-details__image"
+          src="images/piano.jpg"
+          alt="Занятие по игре на фортепиано"
+        >
+      </div>
+
+      <div class="product-details__content">
+        <h2 class="product-details__title">
+          Курс игры на фортепиано
+        </h2>
+
+        <p class="product-details__description">
+          Индивидуальные занятия по фортепиано
+          для детей и взрослых с любым уровнем подготовки.
+          Обучение строится с учётом целей и возраста ученика.
+        </p>
+
+        <p>
+          На занятиях ученик развивает музыкальный слух,
+          чувство ритма, изучает нотную грамоту
+          и осваивает технику игры на инструменте.
+        </p>
+
+        <p class="product-details__price">
+          от 1700 руб. / занятие
+        </p>
+        
+        <!-- Ссылка на страницу Записи на урок -->
+        <a class="button button--primary" href="order.html">
+          Записаться на пробное занятие
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Характеристики курса по фортепиано</h2>
+
+      <table class="product-table">
+        <caption>
+          Основная информация о курсе
+        </caption>
+
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Направление</td>
+            <td>Фортепиано</td>
+          </tr>
+
+          <tr>
+            <td>Возраст</td>
+            <td>от 6 лет</td>
+          </tr>
+
+          <tr>
+            <td>Уровень подготовки</td>
+            <td>Любой</td>
+          </tr>
+
+          <tr>
+            <td>Формат занятий</td>
+            <td>Индивидуальный</td>
+          </tr>
+
+          <tr>
+            <td>Продолжительность</td>
+            <td>60 минут</td>
+          </tr>
+
+          <tr>
+            <td>Стоимость</td>
+            <td>от 1700 руб.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="product-details" id="vocal">
+      <div class="product-details__image-wrapper">
+        <span class="product-details__badge">
+          Популярное
+        </span>
+
+        <img
+          class="product-details__image"
+          src="images/vocal.jpg"
+          alt="Занятие по вокалу"
+        >
+      </div>
+
+      <div class="product-details__content">
+        <h2 class="product-details__title">
+          Курс вокала
+        </h2>
+
+        <p class="product-details__description">
+          Индивидуальные занятия по вокалу
+          для детей и взрослых.
+          Курс подходит ученикам с любым уровнем подготовки.
+        </p>
+
+        <p>
+          На занятиях ученик работает над дыханием,
+          постановкой голоса, дикцией и интонацией,
+          а также разучивает выбранные композиции.
+        </p>
+
+        <p class="product-details__price">
+          от 1600 руб. / занятие
+        </p>
+
+        <!-- Ссылка на страницу Записи на урок -->
+        <a class="button button--primary" href="order.html">
+          Записаться на пробное занятие
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Характеристики курса по вокалу</h2>
+
+      <table class="product-table">
+        <caption>
+          Основная информация о курсе
+        </caption>
+
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Направление</td>
+            <td>Вокал</td>
+          </tr>
+
+          <tr>
+            <td>Возраст</td>
+            <td>от 7 лет</td>
+          </tr>
+
+          <tr>
+            <td>Уровень подготовки</td>
+            <td>Любой</td>
+          </tr>
+
+          <tr>
+            <td>Формат занятий</td>
+            <td>Индивидуальный</td>
+          </tr>
+
+          <tr>
+            <td>Продолжительность</td>
+            <td>60 минут</td>
+          </tr>
+
+          <tr>
+            <td>Стоимость</td>
+            <td>от 1600 руб.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Доп. инфомарция -->
+    <aside class="aside-info">
+      <h2>Первое занятие</h2>
+
+      <p>
+        На пробном занятии преподаватель познакомится с учеником,
+        определит уровень подготовки и поможет подобрать
+        подходящую программу обучения.
+      </p>
+
+      <a class="button button--primary" href="order.html">
+        Записаться
+      </a>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Музыкальная школа «Аккорд».</p>
+    <p>Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+  </footer>
+</body>
+</html>
